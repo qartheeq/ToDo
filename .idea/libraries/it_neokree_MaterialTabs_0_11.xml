@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="it.neokree:MaterialTabs-0.11">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MaterialTabs-0.11.aar/e622d111257f3885d570c287d634153e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MaterialTabs-0.11.aar/e622d111257f3885d570c287d634153e/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/it.neokree/MaterialTabs/0.11/6ce2a9aab571fe40cf8ae8a4bcfd0eae1084752d/MaterialTabs-0.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

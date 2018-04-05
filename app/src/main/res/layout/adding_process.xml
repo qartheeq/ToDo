@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AddingTask"
+    android:screenOrientation="portrait">
+
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/title"
+                android:hint="Title"
+                app:met_floatingLabel="highlight"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:maxLines="3"
+                app:met_minCharacters="5" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/description"
+                android:hint="Description"
+                app:met_floatingLabel="highlight"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:maxLines="3"
+                app:met_minCharacters="5" />
+
+            <TextView
+                android:id="@+id/dueDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/button"
+                android:layout_below="@+id/editText"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:text="@string/init_date_text" />
+
+            <Button
+                android:id="@+id/dueDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pick_date"
+                android:textColor="@color/pickPeriod"
+                android:onClick="showCalendar"
+                android:padding="14dp"
+                android:layout_below="@+id/chosenDate"
+                android:layout_alignEnd="@+id/textView"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/ic_pick_date"
+                android:theme="@style/pickPeriod"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due time"
+                android:id="@+id/dueTimeLabel"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick Time"
+                android:textColor="@color/pickPeriod"
+                android:drawableLeft="@drawable/ic_pick_time"
+                android:padding="14dp"
+                android:id="@+id/dueTime"
+                android:layout_gravity="center_horizontal"
+                android:onClick="showTimePicker"
+                android:theme="@style/pickPeriod" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:id="@+id/addTask"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/datePickerCaller"
+                android:layout_gravity="center_horizontal"
+                android:onClick="addNewTask"
+                android:layout_marginTop="26dp"
+                android:textColor="@color/pickPeriod"
+                android:theme="@style/pickPeriod"
+                android:padding="14dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
